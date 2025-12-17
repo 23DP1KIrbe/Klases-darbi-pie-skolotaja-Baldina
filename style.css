@@ -159,6 +159,76 @@ main {
     color: white;
 }
 
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body.dark-mode .controls-section {
+    background-color: #2a2a2a;
+}
+
+.search-container {
+    flex: 2;
+    min-width: 200px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #4a7c59;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+body.dark-mode #searchInput {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #6ba87e;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 124, 89, 0.5);
+}
+
+.sort-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sort-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sort-btn:hover {
+    background-color: #3a6b4a;
+    transform: scale(1.05);
+}
+
+body.dark-mode .sort-btn {
+    background-color: #3a6b4a;
+}
+
+body.dark-mode .sort-btn:hover {
+    background-color: #2a5a3a;
+}
+
 .cards-section h2 {
     color: #4a7c59;
     margin-bottom: 1.5rem;
@@ -184,7 +254,7 @@ body.dark-mode .cards-section h2 {
     overflow: hidden;
     flex: 1;
     min-width: 250px;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
 }
 
 body.dark-mode .card {
@@ -195,6 +265,10 @@ body.dark-mode .card {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.card.hidden {
+    display: none;
 }
 
 .card img {
@@ -388,11 +462,6 @@ body.dark-mode .form-group textarea {
     animation: fadeIn 0.3s;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .error-highlight {
     border-color: #e74c3c !important;
     background-color: #ffeaea;
@@ -401,12 +470,6 @@ body.dark-mode .form-group textarea {
 
 body.dark-mode .error-highlight {
     background-color: #4a2a2a;
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
 }
 
 .submit-btn {
@@ -492,5 +555,18 @@ body.dark-mode .success-message {
     
     .social-links a {
         margin: 0 0.5rem;
+    }
+    
+    .controls-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-container, .sort-container {
+        width: 100%;
+    }
+    
+    .sort-container {
+        justify-content: center;
     }
 }

@@ -38,28 +38,18 @@
                 <h1>RareLang valodas apmācības mājaslapa</h1>
                 <p>Mācies baltu, seno un reģionālo valodu noslēpumus kopā ar pieredzējušiem skolotājiem. Rezervē individuālas nodarbības, izmanto interaktīvus gramatikas vingrinājumus, flashcards, klausīšanās un rakstīšanas uzdevumus. Mūsu platforma palīdz apgūt ne tikai valodu, bet arī tās kultūru, vēstūri un izrunas nianses. Pārvērt valodu mācīšanos aizraujošā ceļojumā cauri laikam!</p>
             </section>
-
+            <section class="controls-section">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Meklēt kursus...">
+                </div>
+                <div class="sort-container">
+                    <button id="sortAZ" class="sort-btn">A-Z</button>
+                    <button id="sortZA" class="sort-btn">Z-A</button>
+                </div>
+            </section>
             <section class="cards-section">
                 <h2>Mūsu piedāvātie kursi</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="About_Baltics_thumb.jpg" alt="Baltu valodas">
-                        <h3>Baltu valodas</h3>
-                        <p>Iemācies senās baltu valodas kā latviešu, lietuviešu un prūšu valodu pamatus.</p>
-                        <button class="card-btn">Uzzināt vairāk</button>
-                    </div>
-                    <div class="card">
-                        <img src="Roman_Empire_map.svg.png" alt="Senās valodas">
-                        <h3>Senās valodas</h3>
-                        <p>Izpēti senās valodas kā latīņu, sengrieķu un citas vēsturiskās valodas.</p>
-                        <button class="card-btn">Uzzināt vairāk</button>
-                    </div>
-                    <div class="card">
-                        <img src="Latgales_vēlēšanu_apgabals.svg.png" alt="Reģionālās valodas">
-                        <h3>Reģionālās valodas</h3>
-                        <p>Apgūsti reģionālās valodas no dažādām Eiropas un pasaules daļām.</p>
-                        <button class="card-btn">Uzzināt vairāk</button>
-                    </div>
+                <div class="cards-container" id="cardsContainer">
                 </div>
             </section>
             
